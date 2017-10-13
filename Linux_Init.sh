@@ -9,7 +9,7 @@
 #	6.delete some useless softwares.
 #
 #History:
-#2017/10/12	ACool	First release
+#2017/10/12	ACool	4th  release
 
 mkdir Backup
 
@@ -38,8 +38,8 @@ sudo apt-get autoremove
 
 read -p "Is your system language Chinese?(y/n)" result_1
 if [ "${result_1}"=="Y" ] || [ "${result_1}"=="y" ];then
-echo -e "change directory to english,convenienting command line opration."
-echo -e "(改变中文目录为英文，方便命令行操作.)"
+	echo -e "change directory to english,convenienting command line opration."
+	echo -e "(改变中文目录为英文，方便命令行操作.)"
 sleep 4
 
 export LANG=en_US
@@ -49,9 +49,9 @@ fi
 
 read -p "Is your computer dual boot?(您的电脑是双系统吗)(Y/n)" result_2
 if [ "${result_2}"=="Y" ] || [ "${result_2}"=="y" ];then
-sudo apt-get install ntpdate
-sudo ntpdate time.windows.com
-sudo hwclock --localtime --systohc
+	sudo apt-get install ntpdate
+	sudo ntpdate time.windows.com
+	sudo hwclock --localtime --systohc
 fi
 
 ##Download softwares
@@ -68,7 +68,7 @@ sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
 sudo apt-get update  
 sudo apt-get install indicator-sysmonitor
 indicator-sysmonitor &
-echo -e "Please read the page:"
+echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#title-bar-network-speed-monitoring-software-configuration"
 read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_3
 if [ "${result_3}"=="n" ] || [ "${result_3}"=="N" ];then
 	echo -e "Please follow the instructions."
