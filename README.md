@@ -1,6 +1,10 @@
 # Ubuntu_Init
 ubuntu 16.04 系统一键环境配置脚本
 
+配置完毕的界面如所示:
+
+[![9LX7y.md.png](https://s1.ax2x.com/2017/10/13/9LX7y.md.png)](https://simimg.com/i/9LX7y)
+
 ## 运行
 
 在Ubuntu_Init目录，输入以下命令
