@@ -1,8 +1,20 @@
 # Ubuntu_Init
 ubuntu 16.04 系统一键环境配置脚本
+
+## 运行
+
+在Ubuntu_Init目录，输入以下命令
+
+`chmod u+x Linux_Init.sh`
+
+然后运行脚本:
+
+`./Linux_Init.sh`
+
 - [x] 换USTC源
 - [x] 更新系统软件
 - [x] 更换目录为英文(若是中文目录的话)
+- [x] 启动器移动到屏幕底部
 - [x] 同步windows/Ubuntu双系统时间
 - [x] 安装vim
 - [x] 安装git
