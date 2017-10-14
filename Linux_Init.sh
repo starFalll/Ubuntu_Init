@@ -9,7 +9,7 @@
 #	6.delete some useless softwares.
 #
 #History:
-#2017/10/12	ACool	4th  release
+#2017/10/12	ACool	7th  release
 
 mkdir Backup
 
