@@ -61,6 +61,15 @@ sudo apt-get install openjdk-8*
 
 wget http://cdn2.ime.sogou.com/dl/index/1491565850/sogoupinyin_2.1.0.0086_amd64.deb?st=H6Fv3RXvgGFlgWBT3xkMZw&e=1507788214&fn=sogoupinyin_2.1.0.0086_amd64.deb
 sudo dpkg -i sogoupinyin_2.1.0.0086_amd64.deb*
+echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration"
+read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_3
+if [ "${result_3}"=="n" ] || [ "${result_3}"=="N" ];then
+        echo -e "Please follow the instructions."
+        read -p "Continue?(Y/n)" result_4
+        if [ "${result_4}"!="Y" ] || ["${result_4}"!="y" ];then
+                exit 0
+        fi
+fi
 
 sudo apt-get purge unity-webapps-common
 
@@ -69,13 +78,21 @@ sudo apt-get update
 sudo apt-get install indicator-sysmonitor
 indicator-sysmonitor &
 echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#title-bar-network-speed-monitoring-software-configuration"
-read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_3
-if [ "${result_3}"=="n" ] || [ "${result_3}"=="N" ];then
+read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_5
+if [ "${result_5}"=="n" ] || [ "${result_5}"=="N" ];then
 	echo -e "Please follow the instructions."
-	read -p "Continue?(Y/n)" result_4
-	if [ "${result_4}"!="Y" ] || ["${result_4}"!="y" ];then
+	read -p "Continue?(Y/n)" result_6
+	if [ "${result_6}"!="Y" ] || ["${result_6}"!="y" ];then
 		exit 0
 	fi
+fi
+
+read -p "The configuration is complete and needs to be restarted(配置完成需要重启)(Y/n)" result_7
+
+if [ "${result_7}"=="Y" ] || [ "${result_7}"=="y" ];then
+	sudo reboot
+elif [ "${result_7}"=="N" ] || [ "${result_7}"=="n" ];then
+	echo -e "Please reboot later.(请稍后重启)"
 fi
 
 
