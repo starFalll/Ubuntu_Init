@@ -3,7 +3,7 @@ ubuntu 16.04 系统一键环境配置脚本
 
 配置完毕的界面如所示:
 
-![9LX7y.png](https://s1.ax2x.com/2017/10/13/9LX7y.png)
+![9KeSE.png](https://s1.ax2x.com/2017/10/14/9KeSE.png)
 
 ## 运行
 
