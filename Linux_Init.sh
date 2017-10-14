@@ -13,7 +13,7 @@
 
 mkdir Backup
 
-gsettings set com.canonical.Unity.Launcher launcher-position Bottom
+#gsettings set com.canonical.Unity.Launcher launcher-position Bottom
 
 test -f sources.list && result_0="y"
 if [ "${result_0}"=="y" ];then
