@@ -3,7 +3,7 @@ ubuntu 16.04 系统一键环境配置脚本
 
 配置完毕的界面如所示:
 
-[![9LX7y.md.png](https://s1.ax2x.com/2017/10/13/9LX7y.md.png)](https://simimg.com/i/9LX7y)
+![9LX7y.png](https://s1.ax2x.com/2017/10/13/9LX7y.png)
 
 ## 运行
 
@@ -33,11 +33,11 @@ ubuntu 16.04 系统一键环境配置脚本
 
 点击右上角输入法，搜狗拼音->设置->高级->打开Fcitx设置，如下图所示：
 
-[![9L5Fe.md.png](https://s1.ax2x.com/2017/10/13/9L5Fe.md.png)](https://simimg.com/i/9L5Fe)
+![9L5Fe.md.png](https://s1.ax2x.com/2017/10/13/9L5Fe.md.png)
 
 Fcitx配置如下图所示，如果没有"键盘-英语(美国)"，点击"+"号添加即可.
 
-[![9L9ud.md.png](https://s1.ax2x.com/2017/10/13/9L9ud.md.png)](https://simimg.com/i/9L9ud)
+![9L9ud.md.png](https://s1.ax2x.com/2017/10/13/9L9ud.md.png)
 
 
 ## Title bar network speed monitoring software configuration
@@ -46,11 +46,11 @@ Fcitx配置如下图所示，如果没有"键盘-英语(美国)"，点击"+"号�
 
 点击右上角监控栏的Preferences按钮，在打开的设置面板里面按照如下设置：
 
-[![9EqyO.md.png](https://s1.ax2x.com/2017/10/13/9EqyO.md.png)](https://simimg.com/i/9EqyO)
+![9EqyO.md.png](https://s1.ax2x.com/2017/10/13/9EqyO.md.png)
 
 勾选"Run on startup",开机启动.
 
-[![9Ewlq.md.png](https://s1.ax2x.com/2017/10/13/9Ewlq.md.png)](https://simimg.com/i/9Ewlq)
+![9Ewlq.md.png](https://s1.ax2x.com/2017/10/13/9Ewlq.md.png)
 
 在"Customize output"栏添加"net:{net}"项，添加网速监控.
 
