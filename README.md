@@ -53,3 +53,23 @@ Fcitx配置如下图所示，如果没有"键盘-英语(美国)"，点击"+"号�
 
 在"Customize output"栏添加"net:{net}"项，添加网速监控.
 
+## System landscaping
+
+系统美化手动设置项：
+
+在搜索栏搜索"unity tweak tool",打开Unity 图形化管理工具，如下图所示：
+
+![D0193.png](https://s1.ax2x.com/2017/10/15/D0193.png)
+
+点击“主题”，选择“Flatabulous”扁平化主题：
+
+![D0eJ6.png](https://s1.ax2x.com/2017/10/15/D0eJ6.png)
+
+点击“图标”，选择“Ultra-flat”图标:
+
+![D0UIp.png](https://s1.ax2x.com/2017/10/15/D0UIp.png)
+
+系统美化设置完成。
+
+
+
