@@ -94,6 +94,16 @@ sudo apt-get install flatabulous-theme
 sudo add-apt-repository ppa:noobslab/icons
 sudo apt-get update
 sudo apt-get install ultra-flat-icons
+echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#system-landscaping"
+read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_8
+if [ "${result_8}"=="n" ] || [ "${result_8}"=="N" ];then
+        echo -e "Please follow the instructions."
+        read -p "Continue?(Y/n)" result_9
+        if [ "${result_9}"!="Y" ] || ["${result_9}"!="y" ];then
+                exit 0
+        fi
+fi
+
 
 
 
