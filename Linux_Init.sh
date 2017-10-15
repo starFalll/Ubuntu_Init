@@ -7,7 +7,7 @@
 #	4.install sougoupinyin.
 #	5.change directory to english.
 #	6.delete some useless softwares.
-#
+#	7.System landscaping.
 #History:
 #2017/10/12	ACool	7th  release
 
@@ -86,6 +86,16 @@ if [ "${result_5}"=="n" ] || [ "${result_5}"=="N" ];then
 		exit 0
 	fi
 fi
+
+sudo apt-get install unity-tweak-tool
+sudo add-apt-repository ppa:noobslab/themes
+sudo apt-get update
+sudo apt-get install flatabulous-theme
+sudo add-apt-repository ppa:noobslab/icons
+sudo apt-get update
+sudo apt-get install ultra-flat-icons
+
+
 
 read -p "The configuration is complete and needs to be restarted(配置完成需要重启)(Y/n)" result_7
 
