@@ -1,4 +1,5 @@
 #!/bin/bash
+#url:https://github.com/starFalll/Ubuntu_Init/
 #Program:
 #	linux environment configuration initialization
 #	1.change sources.list,from official sources to USTC sources.
@@ -9,7 +10,7 @@
 #	6.delete some useless softwares.
 #	7.System landscaping.
 #History:
-#2017/10/12	ACool	7th  release
+#2017/10/16	ACool	11th  release
 
 mkdir Backup
 
@@ -60,18 +61,20 @@ sudo apt-get install vim
 sudo apt-get install git
 sudo apt-get install openjdk-8*
 
-wget http://cdn2.ime.sogou.com/dl/index/1491565850/sogoupinyin_2.1.0.0086_amd64.deb?st=H6Fv3RXvgGFlgWBT3xkMZw&e=1507788214&fn=sogoupinyin_2.1.0.0086_amd64.deb
-sudo dpkg -i sogoupinyin_2.1.0.0086_amd64.deb*
-echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration"
-read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_3
-if [ "${result_3}" == "n" ] || [ "${result_3}" == "N" ]; then
-        echo -e "Please follow the instructions."
-        read -p "Continue?(Y/n)" result_4
-        if [ "${result_4}" != "Y" ] || ["${result_4}" != "y" ]; then
-                exit 0
-        fi
+read -p"Download sougoupinyin?(安装搜狗拼音输入法) (Y/n) :" YN
+if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
+	wget http://cdn2.ime.sogou.com/dl/index/1491565850/sogoupinyin_2.1.0.0086_amd64.deb?st=H6Fv3RXvgGFlgWBT3xkMZw&e=1507788214&fn=sogoupinyin_2.1.0.0086_amd64.deb
+	sudo dpkg -i sogoupinyin_2.1.0.0086_amd64.deb*
+	echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration"
+	read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_3
+	if [ "${result_3}" == "n" ] || [ "${result_3}" == "N" ]; then
+        	echo -e "Please follow the instructions."
+        	read -p "Continue?(Y/n)" result_4
+        	if [ "${result_4}" != "Y" ] || ["${result_4}" != "y" ]; then
+                	exit 0
+        	fi
+	fi
 fi
-
 sudo apt-get purge unity-webapps-common
 
 sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor  
