@@ -16,7 +16,8 @@ mkdir Backup
 #gsettings set com.canonical.Unity.Launcher launcher-position Bottom
 
 test -f sources.list && result_0="y"
-if [ "${result_0}"=="y" ];then
+if [ "${result_0}" == "y" ];then
+	echo "Begin copy"
 	sudo cp /etc/apt/sources.list Backup/sources.list
 	sudo cp sources.list /etc/apt/sources.list
 else
@@ -24,7 +25,7 @@ else
 	echo -e "Please check whether the file in the warehouse catalog is complete."
 	echo -e "(包含中科大的源文件不存在!请检查仓库目录下文件是否完整.)"
 	read -p "Coutinue?(Y/n)" yn
-	if [ "${yn}"=="n" ] || [ "${yn}"=="N" ];then
+	if [ "${yn}" == "n" ] || [ "${yn}" == "N" ]; then
 		exit 0;
 	fi
 fi
@@ -37,7 +38,7 @@ sudo apt-get autoremove
 
 
 read -p "Is your system language Chinese?(y/n)" result_1
-if [ "${result_1}"=="Y" ] || [ "${result_1}"=="y" ];then
+if [ "${result_1}" == "Y" ] || [ "${result_1}" == "y" ]; then
 	echo -e "change directory to english,convenienting command line opration."
 	echo -e "(改变中文目录为英文，方便命令行操作.)"
 sleep 4
@@ -48,7 +49,7 @@ export LANG=zh-CN
 fi
 
 read -p "Is your computer dual boot?(您的电脑是双系统吗)(Y/n)" result_2
-if [ "${result_2}"=="Y" ] || [ "${result_2}"=="y" ];then
+if [ "${result_2}" == "Y" ] || [ "${result_2}" == "y" ]; then
 	sudo apt-get install ntpdate
 	sudo ntpdate time.windows.com
 	sudo hwclock --localtime --systohc
@@ -63,10 +64,10 @@ wget http://cdn2.ime.sogou.com/dl/index/1491565850/sogoupinyin_2.1.0.0086_amd64.
 sudo dpkg -i sogoupinyin_2.1.0.0086_amd64.deb*
 echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration"
 read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_3
-if [ "${result_3}"=="n" ] || [ "${result_3}"=="N" ];then
+if [ "${result_3}" == "n" ] || [ "${result_3}" == "N" ]; then
         echo -e "Please follow the instructions."
         read -p "Continue?(Y/n)" result_4
-        if [ "${result_4}"!="Y" ] || ["${result_4}"!="y" ];then
+        if [ "${result_4}" != "Y" ] || ["${result_4}" != "y" ]; then
                 exit 0
         fi
 fi
@@ -79,10 +80,10 @@ sudo apt-get install indicator-sysmonitor
 indicator-sysmonitor &
 echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#title-bar-network-speed-monitoring-software-configuration"
 read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_5
-if [ "${result_5}"=="n" ] || [ "${result_5}"=="N" ];then
+if [ "${result_5}" == "n" ] || [ "${result_5}" == "N" ]; then
 	echo -e "Please follow the instructions."
 	read -p "Continue?(Y/n)" result_6
-	if [ "${result_6}"!="Y" ] || ["${result_6}"!="y" ];then
+	if [ "${result_6}" != "Y" ] || ["${result_6}" != "y" ]; then
 		exit 0
 	fi
 fi
@@ -96,10 +97,10 @@ sudo apt-get update
 sudo apt-get install ultra-flat-icons
 echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#system-landscaping"
 read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_8
-if [ "${result_8}"=="n" ] || [ "${result_8}"=="N" ];then
+if [ "${result_8}" == "n" ] || [ "${result_8}" == "N" ]; then
         echo -e "Please follow the instructions."
         read -p "Continue?(Y/n)" result_9
-        if [ "${result_9}"!="Y" ] || ["${result_9}"!="y" ];then
+        if [ "${result_9}" != "Y" ] || ["${result_9}" != "y" ]; then
                 exit 0
         fi
 fi
@@ -109,9 +110,9 @@ fi
 
 read -p "The configuration is complete and needs to be restarted(配置完成需要重启)(Y/n)" result_7
 
-if [ "${result_7}"=="Y" ] || [ "${result_7}"=="y" ];then
+if [ "${result_7}" == "Y" ] || [ "${result_7}" == "y" ];then
 	sudo reboot
-elif [ "${result_7}"=="N" ] || [ "${result_7}"=="n" ];then
+elif [ "${result_7}" == "N" ] || [ "${result_7}" == "n" ];then
 	echo -e "Please reboot later.(请稍后重启)"
 fi
 
