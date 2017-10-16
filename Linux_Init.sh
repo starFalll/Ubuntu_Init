@@ -17,8 +17,8 @@ mkdir Backup
 
 test -f sources.list && result_0="y"
 if [ "${result_0}"=="y" ];then
-	cp /etc/apt/sources.list Backup/sources.list
-	cp sources.list /etc/apt/sources.list
+	sudo cp /etc/apt/sources.list Backup/sources.list
+	sudo cp sources.list /etc/apt/sources.list
 else
 	echo -e "The sources file which contains USTC sources does not exist!"
 	echo -e "Please check whether the file in the warehouse catalog is complete."
