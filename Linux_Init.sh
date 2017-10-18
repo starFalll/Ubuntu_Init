@@ -1,5 +1,6 @@
 #!/bin/bash
-#url:https://github.com/starFalll/Ubuntu_Init/
+#https://github.com/starFalll/Ubuntu_Init/
+#
 #Program:
 #	linux environment configuration initialization
 #	1.change sources.list,from official sources to USTC sources.
@@ -9,8 +10,10 @@
 #	5.change directory to english.
 #	6.delete some useless softwares.
 #	7.System landscaping.
+#	8.install vs code/sublime
+#
 #History:
-#2017/10/16	ACool	11th  release
+#2017/10/18	ACool	12th  release
 
 mkdir Backup
 
@@ -108,8 +111,39 @@ if [ "${result_8}" == "n" ] || [ "${result_8}" == "N" ]; then
         fi
 fi
 
+echo -e "****************************************************"
+echo -e "*Please select the following editor to install:    *"
+echo -e "*(请选择以下编辑器安装)                            *"
+echo -e "*1.Visual Studio Code                              *"
+echo -e "*2.sublime text3                                   *"
+echo -e "*3.no editor                                       *"
+echo -e "****************************************************"
+read -p "Please input your choose (1/2/3) (请输入选择序号):  " editer
 
+if [ "${editer}" == "1" ]; then
+	curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+	sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+	sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+	sudo apt-get update
+	sudo apt-get install code
+	echo -e "VS code was installed successfully!"
+	echo -e "(vscode安装成功!)"
+	sleep 3
 
+elif [ "${editer}" == "2" ]; then
+	wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+	sudo apt-get install apt-transport-https
+	echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+	sudo apt-get update
+	sudo apt-get install sublime-text
+	echo -e "The sublime text3 was installed successfully!"
+	echo -e "(sublime安装成功!)"
+	sleep 3
+else 
+	echo -e"No editor was installed!"	
+	echo -e"(没有安装编辑器!)"
+	sleep 3
+fi
 
 read -p "The configuration is complete and needs to be restarted(配置完成需要重启)(Y/n)" result_7
 
