@@ -28,7 +28,7 @@ ubuntu 64位系统一键环境配置脚本
 - [x] 删除Amazon的链接
 - [x] 安装标题栏网速监控软件
 - [x] 系统美化
-- [x] 安装编辑器(vscode/sublime)
+- [x] 安装编辑器(可选vscode/sublime)
 
 ## Sogou Pinyin input method configuration
 
