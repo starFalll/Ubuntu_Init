@@ -32,6 +32,8 @@ ubuntu 64位系统一键环境配置脚本
 - [x] 系统美化
 - [x] 安装编辑器(可选vscode/sublime)
 
+**以下为脚本运行中的配置项，请按照脚本提示修改**
+
 ## Sogou Pinyin input method configuration
 
 搜狗拼音输入法配置
