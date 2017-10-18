@@ -13,7 +13,7 @@
 #	8.install vs code/sublime
 #
 #History:
-#2017/10/18	ACool	12th  release
+#2017/10/18	ACool	14th  release
 
 mkdir Backup
 
@@ -66,11 +66,14 @@ sudo apt-get install openjdk-8*
 
 read -p"Download sougoupinyin?(安装搜狗拼音输入法) (Y/n) :" YN
 if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
+	sudo apt-get remove fcitx*
+	sudo apt-get autoremove
 	rm sogoupinyin_2.1.0.0086_amd64.deb*
 	wget http://cdn2.ime.sogou.com/dl/index/1491565850/sogoupinyin_2.1.0.0086_amd64.deb?st=H6Fv3RXvgGFlgWBT3xkMZw&e=1507788214&fn=sogoupinyin_2.1.0.0086_amd64.deb
 
 	sleep 70 
 	sudo dpkg -i sogoupinyin_2.1.0.0086_amd64.deb*
+	sudo apt-get -f install
 	echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration"
 	read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_3
 	if [ "${result_3}" == "n" ] || [ "${result_3}" == "N" ]; then
