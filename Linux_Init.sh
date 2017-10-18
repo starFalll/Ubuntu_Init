@@ -79,7 +79,7 @@ if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
 	if [ "${result_3}" == "n" ] || [ "${result_3}" == "N" ]; then
         	echo -e "Please follow the instructions."
         	read -p "Continue?(Y/n)" result_4
-        	if [ "${result_4}" != "Y" ] || ["${result_4}" != "y" ]; then
+        	if [ "${result_4}" == "n" ] || ["${result_4}" == "N" ]; then
                 	exit 0
         	fi
 	fi
@@ -95,7 +95,7 @@ read -p "Have you followed the instructions?(您已经按照说明更改配置�
 if [ "${result_5}" == "n" ] || [ "${result_5}" == "N" ]; then
 	echo -e "Please follow the instructions."
 	read -p "Continue?(Y/n)" result_6
-	if [ "${result_6}" != "Y" ] || ["${result_6}" != "y" ]; then
+	if [ "${result_6}" == "n" ] || ["${result_6}" == "N" ]; then
 		exit 0
 	fi
 fi
@@ -112,7 +112,7 @@ read -p "Have you followed the instructions?(您已经按照说明更改配置�
 if [ "${result_8}" == "n" ] || [ "${result_8}" == "N" ]; then
         echo -e "Please follow the instructions."
         read -p "Continue?(Y/n)" result_9
-        if [ "${result_9}" != "Y" ] || ["${result_9}" != "y" ]; then
+        if [ "${result_9}" == "N" ] || ["${result_9}" == "n" ]; then
                 exit 0
         fi
 fi
