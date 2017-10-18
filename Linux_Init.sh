@@ -66,7 +66,10 @@ sudo apt-get install openjdk-8*
 
 read -p"Download sougoupinyin?(安装搜狗拼音输入法) (Y/n) :" YN
 if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
+	rm sogoupinyin_2.1.0.0086_amd64.deb*
 	wget http://cdn2.ime.sogou.com/dl/index/1491565850/sogoupinyin_2.1.0.0086_amd64.deb?st=H6Fv3RXvgGFlgWBT3xkMZw&e=1507788214&fn=sogoupinyin_2.1.0.0086_amd64.deb
+
+	sleep 70 
 	sudo dpkg -i sogoupinyin_2.1.0.0086_amd64.deb*
 	echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration"
 	read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_3
@@ -122,6 +125,7 @@ read -p "Please input your choose (1/2/3) (请输入选择序号):  " editer
 
 if [ "${editer}" == "1" ]; then
 	curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+	sleep 20
 	sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 	sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 	sudo apt-get update
@@ -132,6 +136,7 @@ if [ "${editer}" == "1" ]; then
 
 elif [ "${editer}" == "2" ]; then
 	wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+	sleep 20
 	sudo apt-get install apt-transport-https
 	echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 	sudo apt-get update
