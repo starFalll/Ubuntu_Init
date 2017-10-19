@@ -36,7 +36,6 @@ ubuntu 64位系统一键环境配置脚本
 - [x] 更换目录为英文(若是中文目录的话)
 - [x] 同步windows/Ubuntu双系统时间
 - [x] 安装vim
-- [x] 安装git
 - [x] 安装openjdk8
 - [x] 安装搜狗中文输入法
 - [x] 删除Amazon的链接
