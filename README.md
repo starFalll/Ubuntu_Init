@@ -7,7 +7,19 @@ ubuntu 64位系统一键环境配置脚本
 
 ![9KeSE.png](https://s1.ax2x.com/2017/10/14/9KeSE.png)
 
-## 运行
+## 如何使用
+
+如果ubuntu上面没有下载git，首先下载git：
+
+`sudo apt-get install git`
+
+然后clone仓库到本地：
+
+`git clone https://github.com/starFalll/Ubuntu_Init.git`
+
+然后进入Ubuntu_Init目录:
+
+`cd Ubuntu_Init`
 
 在Ubuntu_Init目录，输入以下命令
 
