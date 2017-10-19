@@ -13,7 +13,7 @@
 #	8.install vs code/sublime
 #
 #History:
-#2017/10/18	ACool	14th  release
+#2017/10/19	ACool	16th  release
 
 mkdir Backup
 
@@ -37,7 +37,7 @@ fi
 sudo apt-get autoclean
 sudo apt-get clean
 sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get upgrade -y
 sudo apt-get autoremove
 
 
@@ -54,19 +54,18 @@ fi
 
 read -p "Is your computer dual boot?(您的电脑是双系统吗)(Y/n)" result_2
 if [ "${result_2}" == "Y" ] || [ "${result_2}" == "y" ]; then
-	sudo apt-get install ntpdate
+	sudo apt-get install -y ntpdate
 	sudo ntpdate time.windows.com
 	sudo hwclock --localtime --systohc
 fi
 
 ##Download softwares
-sudo apt-get install vim
-sudo apt-get install git
-sudo apt-get install openjdk-8*
+sudo apt-get install -y vim
+sudo apt-get install -y openjdk-8*
 
 read -p"Download sougoupinyin?(安装搜狗拼音输入法) (Y/n) :" YN
 if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
-	sudo apt-get remove fcitx*
+	sudo apt-get remove -y fcitx*
 	sudo apt-get autoremove
 	rm sogoupinyin_2.1.0.0086_amd64.deb*
 	wget http://cdn2.ime.sogou.com/dl/index/1491565850/sogoupinyin_2.1.0.0086_amd64.deb?st=H6Fv3RXvgGFlgWBT3xkMZw&e=1507788214&fn=sogoupinyin_2.1.0.0086_amd64.deb
@@ -84,11 +83,11 @@ if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
         	fi
 	fi
 fi
-sudo apt-get purge unity-webapps-common
+sudo apt-get purge -y unity-webapps-common
 
 sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor  
 sudo apt-get update  
-sudo apt-get install indicator-sysmonitor
+sudo apt-get install -y indicator-sysmonitor
 indicator-sysmonitor &
 echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#title-bar-network-speed-monitoring-software-configuration"
 read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_5
@@ -100,13 +99,13 @@ if [ "${result_5}" == "n" ] || [ "${result_5}" == "N" ]; then
 	fi
 fi
 
-sudo apt-get install unity-tweak-tool
+sudo apt-get install -y unity-tweak-tool
 sudo add-apt-repository ppa:noobslab/themes
 sudo apt-get update
-sudo apt-get install flatabulous-theme
+sudo apt-get install -y flatabulous-theme
 sudo add-apt-repository ppa:noobslab/icons
 sudo apt-get update
-sudo apt-get install ultra-flat-icons
+sudo apt-get install -y ultra-flat-icons
 echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#system-landscaping"
 read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_8
 if [ "${result_8}" == "n" ] || [ "${result_8}" == "N" ]; then
@@ -128,22 +127,22 @@ read -p "Please input your choose (1/2/3) (请输入选择序号):  " editer
 
 if [ "${editer}" == "1" ]; then
 	curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-	sleep 20
+	sleep 4
 	sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 	sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 	sudo apt-get update
-	sudo apt-get install code
+	sudo apt-get -y install code
 	echo -e "VS code was installed successfully!"
 	echo -e "(vscode安装成功!)"
 	sleep 3
 
 elif [ "${editer}" == "2" ]; then
 	wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-	sleep 20
-	sudo apt-get install apt-transport-https
+	sleep 2
+	sudo apt-get install -y  apt-transport-https
 	echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 	sudo apt-get update
-	sudo apt-get install sublime-text
+	sudo apt-get -y install sublime-text
 	echo -e "The sublime text3 was installed successfully!"
 	echo -e "(sublime安装成功!)"
 	sleep 3
