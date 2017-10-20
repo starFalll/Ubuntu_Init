@@ -47,7 +47,7 @@ ubuntu 64位系统一键环境配置脚本
 
 ## Sogou Pinyin input method configuration
 
-搜狗拼音输入法配置
+搜狗拼音输入法配置(重启以后配置)
 
 点击右上角输入法，搜狗拼音->设置->高级->打开Fcitx设置，如下图所示：
 
