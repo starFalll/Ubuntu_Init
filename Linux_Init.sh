@@ -74,10 +74,10 @@ if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
 	sudo apt-get -yf install
 	sudo dpkg -i sogoupinyin*
 
-#	echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration"
+#	echo -e "\033[46;37m Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration \033[0m"
 #	read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_3
 #	if [ "${result_3}" == "n" ] || [ "${result_3}" == "N" ]; then
-#        	echo -e "Please follow the instructions."
+#        	echo -e "\033[46;37m Please follow the instructions. \033[0m"
 #        	read -p "Continue?(Y/n)" result_4
 #        	if [ "${result_4}" == "n" ] || ["${result_4}" == "N" ]; then
 #                	exit 0
@@ -133,7 +133,7 @@ if [ "${editer}" == "1" ]; then
 	sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 	sudo apt-get update
 	sudo apt-get -y install code
-	echo -e "VS code was installed successfully!"
+	echo -e "\033[46;37m VS code was installed successfully! \033[0m"
 	echo -e "\033[46;37m (vscode安装成功!) \033[0m"
 	sleep 3
 
@@ -144,11 +144,11 @@ elif [ "${editer}" == "2" ]; then
 	echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 	sudo apt-get update
 	sudo apt-get -y install sublime-text
-	echo -e "The sublime text3 was installed successfully!"
+	echo -e "\033[46;37m The sublime text3 was installed successfully! \033[0m"
 	echo -e "\033[46;37m (sublime安装成功!) \033[0m"
 	sleep 3
 else 
-	echo -e"No editor was installed!"	
+	echo -e"\033[41;37m No editor was installed! \033[0m"	
 	echo -e"\033[41;37m (没有安装编辑器!) \033[0m"
 	sleep 3
 fi
@@ -163,7 +163,7 @@ read -p "Reboot now?(是否立即重启？)(Y/n) :" result_7
 if [ "${result_7}" == "Y" ] || [ "${result_7}" == "y" ];then
 	sudo reboot
 elif [ "${result_7}" == "N" ] || [ "${result_7}" == "n" ];then
-	echo -e "Please reboot later.(请稍后重启)"
+	echo -e "\033[41;37m Please reboot later.(请稍后重启) \033[0m"
 fi
 
 
