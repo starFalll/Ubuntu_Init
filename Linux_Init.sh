@@ -13,7 +13,7 @@
 #	8.install vs code/sublime
 #
 #History:
-#2017/10/20	ACool	18th  release
+#2017/10/23	ACool	19th  release
 
 mkdir Backup
 
@@ -74,16 +74,16 @@ if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
 
 	sudo apt-get -f install
 	sudo dpkg -i sogoupinyin*
-	echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration"
-	read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_3
-	if [ "${result_3}" == "n" ] || [ "${result_3}" == "N" ]; then
-        	echo -e "Please follow the instructions."
-        	read -p "Continue?(Y/n)" result_4
-        	if [ "${result_4}" == "n" ] || ["${result_4}" == "N" ]; then
-                	exit 0
-        	fi
-	fi
-fi
+#	echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration"
+#	read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_3
+#	if [ "${result_3}" == "n" ] || [ "${result_3}" == "N" ]; then
+#        	echo -e "Please follow the instructions."
+#        	read -p "Continue?(Y/n)" result_4
+#        	if [ "${result_4}" == "n" ] || ["${result_4}" == "N" ]; then
+#                	exit 0
+#        	fi
+#	fi
+#fi
 sudo apt-get purge -y unity-webapps-common
 
 sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor  
@@ -153,7 +153,11 @@ else
 	sleep 3
 fi
 
-read -p "The configuration is complete and needs to be restarted(配置完成需要重启)(Y/n)" result_7
+
+
+read -p "The configuration is complete ,Please follow the instructions after rebooting:https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration(配置完成，请重启后按照以下页面配置 https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration)(Y/n)" result_7
+
+
 
 if [ "${result_7}" == "Y" ] || [ "${result_7}" == "y" ];then
 	sudo reboot
