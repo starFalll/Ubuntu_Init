@@ -83,7 +83,7 @@ if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
 #                	exit 0
 #        	fi
 #	fi
-#fi
+fi
 sudo apt-get purge -y unity-webapps-common
 
 sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor  
