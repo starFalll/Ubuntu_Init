@@ -13,7 +13,7 @@
 #	8.install vs code/sublime
 #
 #History:
-#2017/10/23	ACool	29th  release
+#2017/10/23	ACool	31th  release
 
 mkdir Backup
 
@@ -61,7 +61,7 @@ if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
 	rm sogoupinyin_2.1.0.0086_amd64.deb*
 	wget http://cdn2.ime.sogou.com/dl/index/1491565850/sogoupinyin_2.1.0.0086_amd64.deb?st=H6Fv3RXvgGFlgWBT3xkMZw&e=1507788214&fn=sogoupinyin_2.1.0.0086_amd64.deb
 
-	sleep 70 
+	sleep 100
 
 	sudo apt-get -yf install
 	sudo dpkg -i sogoupinyin*
