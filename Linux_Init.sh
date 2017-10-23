@@ -42,15 +42,6 @@ sudo apt-get upgrade -y
 sudo apt-get autoremove
 
 
-if [ $LANG == "zh_CN.UTF-8" ]; then
-	echo -e "\033[44;37m change directory to english,convenienting command line opration. \033[0m"
-	echo -e "\033[44;37m (改变中文目录为英文，方便命令行操作.) \033[0m"
-sleep 4
-
-export LANG=en_US
-xdg-user-dirs-gtk-update
-export LANG=zh-CN
-fi
 
 read -p "Is your computer dual boot?(您的电脑是双系统吗)(Y/n) :" result_2
 if [ "${result_2}" == "Y" ] || [ "${result_2}" == "y" ]; then
@@ -154,7 +145,15 @@ else
 	sleep 3
 fi
 
+if [ $LANG == "zh_CN.UTF-8" ]; then
+	echo -e "\033[44;37m change directory to english,convenienting command line opration. \033[0m"
+	echo -e "\033[44;37m (改变中文目录为英文，方便命令行操作.) \033[0m"
+sleep 4
 
+export LANG=en_US
+xdg-user-dirs-gtk-update
+export LANG=zh-CN
+fi
 
 echo -e "\033[46;37m The configuration is complete ,Please follow the instructions after rebooting:https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration(配置完成，请重启后按照以下页面配置 https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration) \033[0m"
 read -p "Reboot now?(是否立即重启？)(Y/n) :" result_7
