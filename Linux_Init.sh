@@ -74,6 +74,8 @@ if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
 
 	sudo apt-get -f install
 	sudo dpkg -i sogoupinyin*
+	sudo apt-get -f install
+	sudo dpkg -i sogoupinyin*
 #	echo -e "Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration"
 #	read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n)" result_3
 #	if [ "${result_3}" == "n" ] || [ "${result_3}" == "N" ]; then
