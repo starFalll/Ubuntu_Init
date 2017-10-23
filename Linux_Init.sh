@@ -13,7 +13,7 @@
 #	8.install vs code/sublime
 #
 #History:
-#2017/10/23	ACool	19th  release
+#2017/10/23	ACool	29th  release
 
 mkdir Backup
 
@@ -33,7 +33,8 @@ else
 		exit 0;
 	fi
 fi
-
+sudo rm /var/lib/apt/lists/lock
+sudo rm /var/lib/dpkg/lock
 sudo apt-get autoclean
 sudo apt-get clean
 sudo apt-get update
