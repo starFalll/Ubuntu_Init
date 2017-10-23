@@ -107,7 +107,7 @@ sudo apt-get install -y flatabulous-theme
 sudo add-apt-repository ppa:noobslab/icons
 sudo apt-get update
 sudo apt-get install -y ultra-flat-icons
-echo -e "Pleao -e "\033[44;37m e read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#system-landscaping \033[0m"
+echo -e "\033[44;37m "Please read the page(请按照以下说明配置): https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#system-landscaping \033[0m"
 read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n) :" result_8
 if [ "${result_8}" == "n" ] || [ "${result_8}" == "N" ]; then
         echo -e "\033[44;37m Please follow the instructions. \033[0m"
