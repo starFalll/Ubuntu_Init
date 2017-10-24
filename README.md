@@ -31,9 +31,9 @@ ubuntu 64位系统一键环境配置脚本
 
 ## 可能出现的问题
 
-如果出现 **It is impossible to install or remove any software. Please use the package manager "Synaptic" or run "sudo apt-get install -f" in a terminal to fix this issue at first.** 的情况，请按AIL+F4退出终端。
+如果出现 **It is impossible to install or remove any software. Please use the package manager "Synaptic" or run "sudo apt-get install -f" in a terminal to fix this issue at first.** 的情况，请按AIL+F4退出当前终端。
 
-然后输入以下命令手动安装:
+然后按ctrl+alt+t打开终端，输入以下命令手动安装:
 
 ```
 cd Ubuntu_Init
