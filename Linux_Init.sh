@@ -12,9 +12,10 @@
 #	7.System landscaping.
 #	8.install vs code/sublime
 #	9.install uget
+#	10.install typora
 #
 #History:
-#2017/10/24	ACool	32th  release
+#2017/10/24	ACool	33th  release
 
 mkdir Backup
 
@@ -57,6 +58,15 @@ sudo apt-get install -y openjdk-8*
 sudo add-apt-repository -y ppa:plushuang-tw/uget-stable
 sudo apt-get update
 sudo apt-get -y install uget
+sudo apt-get install -y aria2i
+
+# optional, but recommended
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+# add Typora's repository
+sudo add-apt-repository 'deb http://typora.io linux/'
+sudo apt-get update
+# install typora
+sudo apt-get -y install typora
 
 read -p"Download sougoupinyin?(安装搜狗拼音输入法) (Y/n) :" YN
 if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
