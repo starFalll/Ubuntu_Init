@@ -12,7 +12,12 @@
 
 运行脚本:
 
-`./installqq.sh`
+```
+chmod u+x installqq.sh
+
+./installqq.sh
+```
+
 
 然后再输入命令解决乱码问题:
 
