@@ -29,6 +29,24 @@ ubuntu 64位系统一键环境配置脚本
 
 `./Linux_Init.sh`
 
+## 可能出现的问题
+
+如果出现 **It is impossible to install or remove any software. Please use the package manager "Synaptic" or run "sudo apt-get install -f" in a terminal to fix this issue at first.** 的情况，请按AIL+F4退出终端。
+
+然后输入以下命令手动安装:
+
+```
+cd Ubuntu_Init
+
+sudo apt-get install -f 
+
+```
+
+然后再次运行脚本：
+
+`./Linux_Init.sh`
+
+
 ## 目前支持：
 
 - [x] 换USTC源
