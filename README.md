@@ -60,6 +60,7 @@ sudo apt-get install -f
 - [x] 安装标题栏网速监控软件
 - [x] 系统美化
 - [x] 安装编辑器(可选vscode/sublime)
+- [x] 安装uGet下载管理器
 
 **以下为脚本运行中的配置项，请按照脚本提示修改**
 
