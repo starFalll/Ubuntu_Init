@@ -11,9 +11,10 @@
 #	6.delete some useless softwares.
 #	7.System landscaping.
 #	8.install vs code/sublime
+#	9.install uget
 #
 #History:
-#2017/10/23	ACool	31th  release
+#2017/10/24	ACool	32th  release
 
 mkdir Backup
 
@@ -53,6 +54,9 @@ fi
 ##Download softwares
 sudo apt-get install -y vim
 sudo apt-get install -y openjdk-8*
+sudo add-apt-repository -y ppa:plushuang-tw/uget-stable
+sudo apt-get update
+sudo apt-get -y install uget
 
 read -p"Download sougoupinyin?(安装搜狗拼音输入法) (Y/n) :" YN
 if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
@@ -78,7 +82,7 @@ if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
 fi
 sudo apt-get purge -y unity-webapps-common
 
-sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor  
+sudo add-apt-repository -y ppa:fossfreedom/indicator-sysmonitor  
 sudo apt-get update  
 sudo apt-get install -y indicator-sysmonitor
 indicator-sysmonitor &
@@ -93,10 +97,10 @@ if [ "${result_5}" == "n" ] || [ "${result_5}" == "N" ]; then
 fi
 
 sudo apt-get install -y unity-tweak-tool
-sudo add-apt-repository ppa:noobslab/themes
+sudo add-apt-repository -y ppa:noobslab/themes
 sudo apt-get update
 sudo apt-get install -y flatabulous-theme
-sudo add-apt-repository ppa:noobslab/icons
+sudo add-apt-repository -y ppa:noobslab/icons
 sudo apt-get update
 sudo apt-get install -y ultra-flat-icons
 echo -e "\033[44;37m Please read the page(请按照以下说明配置): https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#system-landscaping \033[0m"
