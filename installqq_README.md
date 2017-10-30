@@ -19,9 +19,6 @@ chmod u+x installqq.sh
 ```
 
 
-然后再输入命令解决乱码问题:
-
-`cp SIMSUN.TTC ~/.cxoffice/apps.com.qq.im/dosdevices/c\:/windows/Fonts/SIMSUN.TTC`
 
 最后点击右上角图标搜索qq，找到以后点击即可启动.
 
