@@ -63,6 +63,7 @@ sudo apt-get install -f
 - [x] 安装uGet下载管理器
 - [x] 安装Typora优雅的markdown编辑器
 - [x] 安装qq ([见此](https://github.com/starFalll/Ubuntu_Init/blob/master/installqq_README.md))
+- [x] 可选安装Chrome
 
 **以下为脚本运行中的配置项，请按照脚本提示修改**
 

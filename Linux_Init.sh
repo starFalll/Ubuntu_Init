@@ -13,9 +13,10 @@
 #	8.install vs code/sublime
 #	9.install uget
 #	10.install typora
+#	11.install chrome
 #
 #History:
-#2017/10/24	ACool	33th  release
+#2017/10/30	ACool	34th  release
 
 mkdir Backup
 
@@ -157,6 +158,15 @@ else
 	echo -e"\033[41;37m No editor was installed! \033[0m"	
 	echo -e"\033[41;37m (没有安装编辑器!) \033[0m"
 	sleep 3
+fi
+
+read -p"系统自带的Firefox浏览器可能会出现一些问题,是否卸载该浏览器,安装chrome?(Y/n): " browser
+
+if [ "${browser}" = "y" ] || [ "{browser}" = "Y" ]; then
+	wget -q -O - http://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+	sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+	sudo apt-get update
+	sudo apt-get -y install google-chrome-stable
 fi
 
 if [ $LANG == "zh_CN.UTF-8" ]; then
