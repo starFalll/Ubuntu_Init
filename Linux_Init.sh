@@ -167,6 +167,8 @@ if [ "${browser}" = "y" ] || [ "{browser}" = "Y" ]; then
 	sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 	sudo apt-get update
 	sudo apt-get -y install google-chrome-stable
+	sudo apt-get purge firefox firefox-locale* unity-scope-firefoxbook
+
 fi
 
 if [ $LANG == "zh_CN.UTF-8" ]; then
