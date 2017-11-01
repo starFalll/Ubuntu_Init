@@ -1,4 +1,4 @@
-#!/bash/bin
+#!/bin/bash
 sudo apt-get clean
 sudo apt-get -f install
 sudo dpkg --add-architecture i386
