@@ -10,4 +10,5 @@ sudo dpkg -i deepin-crossover-helper_1.0deepin0_all.deb
 sudo apt-get -yf install
 sudo dpkg -i deepin-crossover-helper_1.0deepin0_all.deb
 sudo dpkg -i apps.com.qq.im_8.1.17255deepin11_i386.deb
-cp SIMSUN.TTC ~/.cxoffice/apps.com.qq.im/dosdevices/c\:/windows/Fonts/SIMSUN.TTC
+sudo sh -c "apt-get update; apt-get install -y libfreetype6:i386 libgcc1:i386 libnss-mdns:i386 libpng12-0:i386 libxext6:i386 python-dbus python-gtk2"
+
