@@ -20,6 +20,22 @@ chmod u+x installqq.sh
 
 
 
-最后点击右上角图标搜索qq，找到以后点击即可启动.
+最后点击右上角图标搜索qq，找到以后点击启动.
 
 ![B3H4A.png](https://s1.ax2x.com/2017/10/24/B3H4A.png)
+
+可以看到现在qq是乱码状态:
+
+![BkMDG.png](https://s1.ax2x.com/2017/11/04/BkMDG.png)
+
+再在终端输入:
+
+`cp SIMSUN.TTC ~/.cxoffice/apps.com.qq.im/dosdevices/c\:/windows/Fonts/SIMSUN.TTC`
+
+[![BkObn.md.png](https://s1.ax2x.com/2017/11/04/BkObn.md.png)](https://simimg.com/i/BkObn)
+
+然后再次打开qq，乱码解决:
+
+![BkbKE.png](https://s1.ax2x.com/2017/11/04/BkbKE.png)
+
+Enjoy!
