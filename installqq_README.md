@@ -38,4 +38,15 @@ chmod u+x installqq.sh
 
 ![BkbKE.png](https://s1.ax2x.com/2017/11/04/BkbKE.png)
 
-Enjoy!
+### 关于QQ关闭以后再次登录显示被占用的解决方案
+
+运行脚本
+
+```
+chmod u+x killqq.sh
+./killqq.sh
+```
+然后再次登录即可。
+
+
+**Enjoy!**
