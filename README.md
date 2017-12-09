@@ -39,7 +39,7 @@ ubuntu 64位系统一键环境配置脚本
 ```
 cd Ubuntu_Init
 
-sudo apt-get install -f 
+sudo apt-get -y install -f 
 
 ```
 
