@@ -16,7 +16,7 @@
 #	11.install chrome
 #
 #History:
-#2017/10/30	ACool	34th  release
+#2017/12/09	ACool	35th  release
 
 mkdir Backup
 
@@ -74,11 +74,11 @@ if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
 	sudo apt-get remove -y fcitx*
 	sudo apt-get autoremove
 	rm sogoupinyin_2.1.0.0086_amd64.deb*
-	wget http://cdn2.ime.sogou.com/dl/index/1491565850/sogoupinyin_2.1.0.0086_amd64.deb?st=H6Fv3RXvgGFlgWBT3xkMZw&e=1507788214&fn=sogoupinyin_2.1.0.0086_amd64.deb
+	wget -q http://cdn2.ime.sogou.com/dl/index/1491565850/sogoupinyin_2.1.0.0086_amd64.deb?st=H6Fv3RXvgGFlgWBT3xkMZw&e=1507788214&fn=sogoupinyin_2.1.0.0086_amd64.deb
+	echo -e "Please wait...\c"
+	sleep 300
 
-	sleep 100
-
-	sudo apt-get -yf install
+	sudo apt-get -yf install 
 	sudo dpkg -i sogoupinyin*
 
 #	echo -e "\033[46;37m Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration \033[0m"
