@@ -16,7 +16,7 @@
 #	11.install chrome
 #	12.install netease-cloud-music
 #History:
-#2017/12/14	ACool	37th  release
+#2017/12/14	ACool	38th  release
 
 mkdir Backup
 
@@ -53,6 +53,15 @@ if [ "${result_2}" == "Y" ] || [ "${result_2}" == "y" ]; then
 	sudo hwclock --localtime --systohc
 fi
 
+echo -e "****************************************************"
+echo -e "*Please select the following softwares to install: *"
+echo -e "*(请选择以下软件安装)                              *"
+echo -e "*1.sougoupinyin(搜狗拼音输入法)                    *"
+echo -e "*2.chrome(会卸载自带的firefox)                     *"
+echo -e "*3.netease-cloud-music(网易云音乐)                 *"
+echo -e "****************************************************"
+read -p "Please input your chooses (1/2/3) (请输入选择序号,一共三个参数,未选择的请输0,例:1 0 1):  " YN browser Music  
+
 ##Download softwares
 sudo apt-get install -y vim
 sudo apt-get install -y openjdk-8*
@@ -69,8 +78,7 @@ sudo apt-get update
 # install typora
 sudo apt-get -y install typora
 
-read -p"Download sougoupinyin?(安装搜狗拼音输入法) (Y/n) :" YN
-if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
+if [ "${YN}" == "1" ] ; then
 	sudo apt-get remove -y fcitx*
 	sudo apt-get autoremove
 	rm sogoupinyin_2.1.0.0086_amd64.deb*
@@ -160,9 +168,8 @@ else
 	sleep 3
 fi
 
-read -p"系统自带的Firefox浏览器可能会出现一些问题,是否卸载该浏览器,安装chrome?(Y/n): " browser
 
-if [ "${browser}" = "y" ] || [ "{browser}" = "Y" ]; then
+if [ "${browser}" = "1" ]; then
 	wget -q -O - http://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 	sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 	sudo apt-get update
@@ -170,8 +177,8 @@ if [ "${browser}" = "y" ] || [ "{browser}" = "Y" ]; then
 	sudo apt-get purge firefox firefox-locale* unity-scope-firefoxbook
 
 fi
-read -p"安装网易云音乐?(仅适用于ubuntu16.04及以上版本) (Y/n) :" Music
-if [ "${Music}" == "Y" ] || [ "${Music}" == "y" ]; then
+
+if [ "${Music}" == "1" ]; then
         wget -q http://d1.music.126.net/dmusic/netease-cloud-music_1.1.0_amd64_ubuntu.deb 
 	echo -e "Please wait...\c"
         sleep 150
@@ -189,6 +196,32 @@ sleep 4
 export LANG=en_US
 xdg-user-dirs-gtk-update
 export LANG=zh-CN
+fi
+echo -e "成功执行以下操作：***********************"
+echo -e "- 更换USTC源"
+echo -e "- 更新系统软件到最新版本"
+echo -e "- 更换目录为英文(若是中文目录的话)"
+echo -e "- 同步windows/Ubuntu双系统时间(若是双系统)"
+echo -e "- 安装vim"
+echo -e "- 安装openjdk8"
+echo -e "- 删除Amazon的链接"
+echo -e "- 安装标题栏网速监控软件"
+echo -e "- 系统美化"
+echo -e "- 安装uGet下载管理器"
+echo -e "- 安装Typora优雅的markdown编辑器"
+if [ "${editer}" == "1" ]; then
+	echo -e "- 安装VS code编辑器"
+elif [ "${editer}" == "2" ]; then
+	echo -e "- 安装sublime text3编辑器"
+fi
+if  [ "${YN}" == "1" ] ; then
+	echo -e"- 安装搜狗中文输入法"
+fi
+if [ "${browser}" = "1" ]; then
+	echo -e"- 安装Chrome"
+fi
+if [ "${Music}" == "1" ]; then
+	echo -e"- 安装网易云音乐"
 fi
 
 echo -e "\033[46;37m The configuration is complete ,Please follow the instructions after rebooting:https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration(配置完成，请重启后按照以下页面配置 https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration) \033[0m"
