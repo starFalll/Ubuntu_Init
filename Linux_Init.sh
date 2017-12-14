@@ -16,7 +16,7 @@
 #	11.install chrome
 #	12.install netease-cloud-music
 #History:
-#2017/12/14	ACool	38th  release
+#2017/12/14	ACool	39th  release
 
 mkdir Backup
 
@@ -197,33 +197,33 @@ export LANG=en_US
 xdg-user-dirs-gtk-update
 export LANG=zh-CN
 fi
-echo -e "成功执行以下操作：***********************"
-echo -e "- 更换USTC源"
-echo -e "- 更新系统软件到最新版本"
-echo -e "- 更换目录为英文(若是中文目录的话)"
-echo -e "- 同步windows/Ubuntu双系统时间(若是双系统)"
-echo -e "- 安装vim"
-echo -e "- 安装openjdk8"
-echo -e "- 删除Amazon的链接"
-echo -e "- 安装标题栏网速监控软件"
-echo -e "- 系统美化"
-echo -e "- 安装uGet下载管理器"
-echo -e "- 安装Typora优雅的markdown编辑器"
+echo -e "成功执行以下操作：***************************"
+echo -e "- 更换USTC源                                *"
+echo -e "- 更新系统软件到最新版本                    *"
+echo -e "- 更换目录为英文(若是中文目录的话)          *"
+echo -e "- 同步windows/Ubuntu双系统时间(若是双系统)  *"
+echo -e "- 安装vim                                   *"
+echo -e "- 安装openjdk8                              *"
+echo -e "- 删除Amazon的链接                          *"
+echo -e "- 安装标题栏网速监控软件                    *"
+echo -e "- 系统美化                                  *"
+echo -e "- 安装uGet下载管理器                        *"
+echo -e "- 安装Typora优雅的markdown编辑器            *"
 if [ "${editer}" == "1" ]; then
-	echo -e "- 安装VS code编辑器"
+echo -e "- 安装VS code编辑器                         *"
 elif [ "${editer}" == "2" ]; then
-	echo -e "- 安装sublime text3编辑器"
+echo -e "- 安装sublime text3编辑器                   *"
 fi
 if  [ "${YN}" == "1" ] ; then
-	echo -e"- 安装搜狗中文输入法"
+echo -e"- 安装搜狗中文输入法                         *"
 fi
 if [ "${browser}" = "1" ]; then
-	echo -e"- 安装Chrome"
+echo -e"- 安装Chrome                                 *"
 fi
 if [ "${Music}" == "1" ]; then
-	echo -e"- 安装网易云音乐"
+echo -e"- 安装网易云音乐                             *"
 fi
-
+echo -e "*********************************************"
 echo -e "\033[46;37m The configuration is complete ,Please follow the instructions after rebooting:https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration(配置完成，请重启后按照以下页面配置 https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration) \033[0m"
 read -p "Reboot now?(是否立即重启？)(Y/n) :" result_7
 
