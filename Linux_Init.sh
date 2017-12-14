@@ -112,7 +112,8 @@ echo -e "Have you followed the instructions?(您已经按照说明更改配置�
 read result_5
 if [ "${result_5}" == "n" ] || [ "${result_5}" == "N" ]; then
 	echo -e "\033[44;37m Please follow the instructions. \033[0m"
-	read -p "Continue?(Y/n) :" result_6
+	echo -e "Continue?(Y/n) :\c"
+	read result_6
 	if [ "${result_6}" == "n" ] || ["${result_6}" == "N" ]; then
 		exit 0
 	fi
