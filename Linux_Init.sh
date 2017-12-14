@@ -31,7 +31,8 @@ else
 	echo -e "\033[41;37m The sources file which contains USTC sources does not exist! \033[0m"
 	echo -e "\033[41;37m Please check whether the file in the warehouse catalog is complete. \033[0m"
 	echo -e "\033[41;37m (包含中科大的源文件不存在!请检查仓库目录下文件是否完整.) \033[0m"
-	read -p "Coutinue?(Y/n) :" yn
+	echo -e "Coutinue?(Y/n) :\c"
+	read  yn
 	if [ "${yn}" == "n" ] || [ "${yn}" == "N" ]; then
 		exit 0;
 	fi
@@ -45,8 +46,8 @@ sudo apt-get upgrade -y
 sudo apt-get autoremove
 
 
-
-read -p "Is your computer dual boot?(您的电脑是双系统吗)(Y/n) :" result_2
+echo -e "Is your computer dual boot?(您的电脑是双系统吗)(Y/n) :\c"
+read  result_2
 if [ "${result_2}" == "Y" ] || [ "${result_2}" == "y" ]; then
 	sudo apt-get install -y ntpdate
 	sudo ntpdate time.windows.com
@@ -60,7 +61,8 @@ echo -e "*1.sougoupinyin(搜狗拼音输入法)                    *"
 echo -e "*2.chrome(会卸载自带的firefox)                     *"
 echo -e "*3.netease-cloud-music(网易云音乐)                 *"
 echo -e "****************************************************"
-read -p "Please input your chooses (1/2/3) (请输入选择序号,一共三个参数,未选择的请输0,例:1 0 1):  " YN browser Music  
+echo -e "Please input your chooses (1/2/3) (请输入选择序号,一共三个参数,未选择的请输0,例:1 0 1):\c"
+read YN browser Music  
 
 ##Download softwares
 sudo apt-get install -y vim
@@ -106,7 +108,8 @@ sudo apt-get update
 sudo apt-get install -y indicator-sysmonitor
 indicator-sysmonitor &
 echo -e "\033[44;37m Please read the page: https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#title-bar-network-speed-monitoring-software-configuration \033[0m"
-read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n) :" result_5
+echo -e "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n) :\c"
+read result_5
 if [ "${result_5}" == "n" ] || [ "${result_5}" == "N" ]; then
 	echo -e "\033[44;37m Please follow the instructions. \033[0m"
 	read -p "Continue?(Y/n) :" result_6
@@ -123,10 +126,12 @@ sudo add-apt-repository -y ppa:noobslab/icons
 sudo apt-get update
 sudo apt-get install -y ultra-flat-icons
 echo -e "\033[44;37m Please read the page(请按照以下说明配置): https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#system-landscaping \033[0m"
-read -p "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n) :" result_8
+echo -e "Have you followed the instructions?(您已经按照说明更改配置了吗?)(Y/n) :\c"
+read result_8
 if [ "${result_8}" == "n" ] || [ "${result_8}" == "N" ]; then
         echo -e "\033[44;37m Please follow the instructions. \033[0m"
-        read -p "Continue?(Y/n) :" result_9
+	echo -e "Continue?(Y/n) :\c"
+        read result_9
         if [ "${result_9}" == "N" ] || ["${result_9}" == "n" ]; then
                 exit 0
         fi
@@ -139,7 +144,8 @@ echo -e "*1.Visual Studio Code                              *"
 echo -e "*2.sublime text3                                   *"
 echo -e "*3.no editor                                       *"
 echo -e "****************************************************"
-read -p "Please input your choose (1/2/3) (请输入选择序号):  " editer
+echo -e "Please input your choose (1/2/3) (请输入选择序号):\c"
+read editer
 
 if [ "${editer}" == "1" ]; then
 	curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -225,7 +231,8 @@ if [ "${Music}" == "1" ]; then
 fi
 
 echo -e "\033[46;37m The configuration is complete ,Please follow the instructions after rebooting:https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration(配置完成，请重启后按照以下页面配置 https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration) \033[0m"
-read -p "Reboot now?(是否立即重启？)(Y/n) :" result_7
+echo -e "Reboot now?(是否立即重启？)(Y/n) :\c"
+read result_7
 
 
 
