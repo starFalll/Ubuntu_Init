@@ -85,7 +85,7 @@ if [ "${YN}" == "1" ] ; then
 	sudo apt-get autoremove
 	rm sogoupinyin_2.1.0.0086_amd64.deb*
 	wget -q http://cdn2.ime.sogou.com/dl/index/1491565850/sogoupinyin_2.1.0.0086_amd64.deb?st=H6Fv3RXvgGFlgWBT3xkMZw&e=1507788214&fn=sogoupinyin_2.1.0.0086_amd64.deb
-	echo -e "Please wait...\c"
+	echo -e "Install sougoupinyin,Please wait...\c"
 	sleep 300
 	sudo dpkg -i sogoupinyin*
 	sudo apt-get -yf install 
@@ -187,7 +187,7 @@ fi
 
 if [ "${Music}" == "1" ]; then
         wget -q http://d1.music.126.net/dmusic/netease-cloud-music_1.1.0_amd64_ubuntu.deb 
-	echo -e "Please wait...\c"
+	echo -e "Install netease-cloud-music,Please wait...\c"
         sleep 150
 	sudo dpkg -i netease-cloud-music*
         sudo apt-get -yf install
