@@ -1,3 +1,4 @@
+[![](https://img.shields.io/badge/language-shell-green.svg)](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) [![](https://img.shields.io/badge/Ubuntu-14.04/16.04-orange.svg)](https://www.ubuntu.com/download/desktop) [![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/starFalll/Ubuntu_Init/blob/master/LICENSE)
 # Ubuntu_Init
 ubuntu 64位系统一键环境配置脚本
 
@@ -118,6 +119,7 @@ Fcitx配置如下图所示，如果没有"键盘-英语(美国)"，点击"+"号�
 
 **Enjoy it!**
 
-
+## 协议
+本脚本遵从 [MIT协议](https://github.com/starFalll/Ubuntu_Init/blob/master/LICENSE)
 
 
