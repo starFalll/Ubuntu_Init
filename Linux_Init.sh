@@ -14,9 +14,9 @@
 #	9.install uget
 #	10.install typora
 #	11.install chrome
-#
+#	12.install netease-cloud-music
 #History:
-#2017/12/09	ACool	35th  release
+#2017/12/14	ACool	36th  release
 
 mkdir Backup
 
@@ -168,6 +168,16 @@ if [ "${browser}" = "y" ] || [ "{browser}" = "Y" ]; then
 	sudo apt-get update
 	sudo apt-get -y install google-chrome-stable
 	sudo apt-get purge firefox firefox-locale* unity-scope-firefoxbook
+
+fi
+read -p"安装网易云音乐?(仅适用于ubuntu16.04及以上版本) (Y/n) :" Music
+if [ "${Music}" == "Y" ] || [ "${Music}" == "y" ]; then
+        wget -q http://d1.music.126.net/dmusic/netease-cloud-music_1.1.0_amd64_ubuntu.deb 
+	echo -e "Please wait...\c"
+        sleep 150
+	sudo dpkg -i netease-cloud-music*
+        sudo apt-get -yf install
+        sudo dpkg -i netease-cloud-music*
 
 fi
 

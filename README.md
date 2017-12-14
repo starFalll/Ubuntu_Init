@@ -65,6 +65,7 @@ sudo apt-get -y install -f
 - [x] 安装Typora优雅的markdown编辑器
 - [x] 安装qq ([见此](https://github.com/starFalll/Ubuntu_Init/blob/master/installqq_README.md))
 - [x] 可选安装Chrome
+- [x] 可选安装网易云音乐（仅适用于16.04以上版本）
 
 **以下为脚本运行中的配置项，请按照脚本提示修改**
 
