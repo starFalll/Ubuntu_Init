@@ -217,18 +217,18 @@ echo -e "- 系统美化                                  *"
 echo -e "- 安装uGet下载管理器                        *"
 echo -e "- 安装Typora优雅的markdown编辑器            *"
 if [ "${editer}" == "1" ]; then
-	echo -e "- 安装VS code编辑器"
+echo -e "- 安装VS code编辑器                         *"
 elif [ "${editer}" == "2" ]; then
-	echo -e "- 安装sublime text3编辑器"
+echo -e "- 安装sublime text3编辑器                   *"
 fi
 if  [ "${YN}" == "1" ] ; then
-	echo -e "- 安装搜狗中文输入法"
+echo -e "- 安装搜狗中文输入法                        *"
 fi
 if [ "${browser}" = "1" ]; then
-	echo -e "- 安装Chrome"
+echo -e "- 安装Chrome                                *"
 fi
 if [ "${Music}" == "1" ]; then
-	echo -e "- 安装网易云音乐"
+echo -e "- 安装网易云音乐                            *"
 fi
 echo -e "*********************************************"
 echo -e "\033[46;37m The configuration is complete ,Please follow the instructions after rebooting:https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration(配置完成，请重启后按照以下页面配置 https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#sogou-pinyin-input-method-configuration) \033[0m"
