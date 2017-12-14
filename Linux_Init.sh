@@ -16,7 +16,7 @@
 #	11.install chrome
 #	12.install netease-cloud-music
 #History:
-#2017/12/14	ACool	36th  release
+#2017/12/14	ACool	37th  release
 
 mkdir Backup
 
@@ -77,7 +77,7 @@ if [ "${YN}" == "Y" ] || [ "${YN}" == "y" ]; then
 	wget -q http://cdn2.ime.sogou.com/dl/index/1491565850/sogoupinyin_2.1.0.0086_amd64.deb?st=H6Fv3RXvgGFlgWBT3xkMZw&e=1507788214&fn=sogoupinyin_2.1.0.0086_amd64.deb
 	echo -e "Please wait...\c"
 	sleep 300
-
+	sudo dpkg -i sogoupinyin*
 	sudo apt-get -yf install 
 	sudo dpkg -i sogoupinyin*
 
