@@ -203,7 +203,11 @@ sleep 4
 export LANG=en_US
 xdg-user-dirs-gtk-update
 export LANG=zh-CN
+
 fi
+
+clear
+
 echo -e "成功执行以下操作：***************************"
 echo -e "- 更换USTC源                                *"
 echo -e "- 更新系统软件到最新版本                    *"
