@@ -16,7 +16,7 @@
 #	11.install chrome
 #	12.install netease-cloud-music
 #History:
-#2017/12/14	ACool	39th  release
+#2017/12/16	ACool	40th  release
 
 mkdir Backup
 
@@ -63,6 +63,15 @@ echo -e "*3.netease-cloud-music(网易云音乐)                 *"
 echo -e "****************************************************"
 echo -e "Please input your chooses (1/2/3) (请输入选择序号,一共三个参数,未选择的请输0,例:1 0 1):\c"
 read YN browser Music  
+echo -e "****************************************************"
+echo -e "*Please select the following editor to install:    *"
+echo -e "*(请选择以下编辑器安装)                            *"
+echo -e "*1.Visual Studio Code                              *"
+echo -e "*2.sublime text3                                   *"
+echo -e "*3.no editor                                       *"
+echo -e "****************************************************"
+echo -e "Please input your choose (1/2/3) (请输入选择序号):\c"
+read editer
 
 ##Download softwares
 sudo apt-get install -y vim
@@ -138,15 +147,6 @@ if [ "${result_8}" == "n" ] || [ "${result_8}" == "N" ]; then
         fi
 fi
 
-echo -e "****************************************************"
-echo -e "*Please select the following editor to install:    *"
-echo -e "*(请选择以下编辑器安装)                            *"
-echo -e "*1.Visual Studio Code                              *"
-echo -e "*2.sublime text3                                   *"
-echo -e "*3.no editor                                       *"
-echo -e "****************************************************"
-echo -e "Please input your choose (1/2/3) (请输入选择序号):\c"
-read editer
 
 if [ "${editer}" == "1" ]; then
 	curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
