@@ -15,8 +15,9 @@
 #	10.install typora
 #	11.install chrome
 #	12.install netease-cloud-music
+#	13.install docky
 #History:
-#2017/12/16	ACool	40th  release
+#2017/12/17	ACool	41th  release
 
 mkdir Backup
 
@@ -60,9 +61,10 @@ echo -e "*(请选择以下软件安装)                              *"
 echo -e "*1.sougoupinyin(搜狗拼音输入法)                    *"
 echo -e "*2.chrome(会卸载自带的firefox)                     *"
 echo -e "*3.netease-cloud-music(网易云音乐)                 *"
+echo -e "*4.docky()					    *"
 echo -e "****************************************************"
-echo -e "Please input your chooses (1/2/3) (请输入选择序号,一共三个参数,未选择的请输0,例:1 0 1):\c"
-read YN browser Music  
+echo -e "Please input your chooses (1/2/3/4) (请输入选择序号,一共四个参数,未选择的请输0,例:1 0 1 0):\c"
+read YN browser Music Docky
 echo -e "****************************************************"
 echo -e "*Please select the following editor to install:    *"
 echo -e "*(请选择以下编辑器安装)                            *"
@@ -110,6 +112,11 @@ if [ "${YN}" == "1" ] ; then
 #        	fi
 #	fi
 fi
+
+if [ "${Docky}" == "1" ];then
+	sudo apt-get -y install docky
+fi
+
 sudo apt-get purge -y unity-webapps-common
 
 sudo add-apt-repository -y ppa:fossfreedom/indicator-sysmonitor  
