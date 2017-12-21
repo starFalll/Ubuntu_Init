@@ -55,14 +55,14 @@ if [ "${result_2}" == "Y" ] || [ "${result_2}" == "y" ]; then
 	sudo hwclock --localtime --systohc
 fi
 
-echo -e "****************************************************"
-echo -e "*Please select the following softwares to install: *"
-echo -e "*(请选择以下软件安装)                              *"
-echo -e "*1.sougoupinyin(搜狗拼音输入法)                    *"
-echo -e "*2.chrome(会卸载自带的firefox)                     *"
-echo -e "*3.netease-cloud-music(网易云音乐)                 *"
-echo -e "*4.docky()					    *"
-echo -e "****************************************************"
+echo -e "***************************************************************************************"
+echo -e "*Please select the following softwares to install:                                    *"
+echo -e "*(请选择以下软件安装)                                                                 *"
+echo -e "*1.sougoupinyin(搜狗拼音输入法)                                                       *"
+echo -e "*2.chrome(会卸载自带的firefox)                                                        *"
+echo -e "*3.netease-cloud-music(网易云音乐)                                                    *"
+echo -e "*4.docky(https://github.com/starFalll/Ubuntu_Init/blob/master/README.md#what-is-docky)*"
+echo -e "***************************************************************************************"
 echo -e "Please input your chooses (1/2/3/4) (请输入选择序号,一共四个参数,未选择的请输0,例:1 0 1 0):\c"
 read YN browser Music Docky
 echo -e "****************************************************"
