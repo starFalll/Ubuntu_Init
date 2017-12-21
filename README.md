@@ -69,6 +69,7 @@ sudo apt-get -y install -f
 - [x] 安装qq ([见此](https://github.com/starFalll/Ubuntu_Init/blob/master/installqq_README.md))
 - [x] 可选安装Chrome
 - [x] 可选安装网易云音乐（仅适用于16.04以上版本）
+- [x] 可选安装docky
 
 **以下为脚本运行中的配置项，请按照脚本提示修改**
 
@@ -116,6 +117,13 @@ Fcitx配置如下图所示，如果没有"键盘-英语(美国)"，点击"+"号�
 ![D0UIp.png](https://s1.ax2x.com/2017/10/15/D0UIp.png)
 
 系统美化设置完成。
+
+## What is docky
+
+Docky 是一款类似于 MAC OS X 底部启动器的软件程序。同时，它可显示天气预报提供了一大堆 docklets，时钟和CPU使用情况，在某种程度上类似于 AWN 和 cairo-dock。如图:
+
+![z49YX.png](https://s1.ax2x.com/2017/12/21/z49YX.png)
+
 
 **Enjoy it!**
 
