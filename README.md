@@ -124,6 +124,11 @@ Docky 是一款类似于 MAC OS X 底部启动器的软件程序。同时，它�
 
 ![z49YX.png](https://s1.ax2x.com/2017/12/21/z49YX.png)
 
+如何使用:
+
+脚本运行完成以后，在左上角搜索栏里搜索docky，点击即可启动，以后开机也会自动启动，无须再次手动启动。如图：
+
+![zPs3q.png](https://s1.ax2x.com/2017/12/22/zPs3q.png)
 
 **Enjoy it!**
 
