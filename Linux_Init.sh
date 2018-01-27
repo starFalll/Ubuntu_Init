@@ -3,7 +3,7 @@
 #
 #Program:
 #	linux environment configuration initialization
-#	1.change sources.list,from official sources to USTC sources.
+#	1.change sources.list,from official sources to USTC sources(16.04)/163 sources(14.04).
 #	2.update and upgrade softwares.
 #	3.install vim.
 #	4.install sougoupinyin.
@@ -17,27 +17,46 @@
 #	12.install netease-cloud-music
 #	13.install docky
 #History:
-#2017/12/17	ACool	41th  release
+#2018/01/27	ACool	42th  release
 
+Sources=$(cat /etc/issue |sed -n "1,1p"| awk '{print $2}'|cut -d '.' -f 1,2)
 mkdir Backup
 
 #gsettings set com.canonical.Unity.Launcher launcher-position Bottom
-
-test -f sources.list && result_0="y"
-if [ "${result_0}" == "y" ];then
-	echo "Begin copy"
-	sudo cp /etc/apt/sources.list Backup/sources.list
-	sudo cp sources.list /etc/apt/sources.list
-else
-	echo -e "\033[41;37m The sources file which contains USTC sources does not exist! \033[0m"
-	echo -e "\033[41;37m Please check whether the file in the warehouse catalog is complete. \033[0m"
-	echo -e "\033[41;37m (包含中科大的源文件不存在!请检查仓库目录下文件是否完整.) \033[0m"
-	echo -e "Coutinue?(Y/n) :\c"
-	read  yn
-	if [ "${yn}" == "n" ] || [ "${yn}" == "N" ]; then
-		exit 0;
+if [ "${Sources}" == "16.04" ];then
+	test -f sources.list && result_0="y"
+	if [ "${result_0}" == "y" ];then
+		echo "Begin copy"
+		sudo cp /etc/apt/sources.list Backup/sources.list
+		sudo cp sources.list /etc/apt/sources.list
+	else
+		echo -e "\033[41;37m The sources file which contains USTC sources does not exist! \033[0m"
+		echo -e "\033[41;37m Please check whether the file in the warehouse catalog is complete. \033[0m"
+		echo -e "\033[41;37m (包含中科大的源文件不存在!请检查仓库目录下文件是否完整.) \033[0m"
+		echo -e "Coutinue?(Y/n) :\c"
+		read  yn
+		if [ "${yn}" == "n" ] || [ "${yn}" == "N" ]; then
+			exit 0;
+		fi
+	fi
+elif [ "${Sources}" == "14.04" ];then
+	test -f sources14.04.list && result_0="y"
+	if [ "${result_0}" == "y" ];then
+        	echo "Begin copy"
+        	sudo cp /etc/apt/sources.list Backup/sources.list
+        	sudo cp sources14.04.list /etc/apt/sources.list
+	else
+        	echo -e "\033[41;37m The sources file which contains 163 sources does not exist! \033[0m"
+        	echo -e "\033[41;37m Please check whether the file in the warehouse catalog is complete. \033[0m"
+        	echo -e "\033[41;37m (包含163的源文件不存在!请检查仓库目录下文件是否完整.) \033[0m"
+        	echo -e "Coutinue?(Y/n) :\c"
+        	read  yn
+        	if [ "${yn}" == "n" ] || [ "${yn}" == "N" ]; then
+                	exit 0;
+        	fi
 	fi
 fi
+
 sudo rm /var/lib/apt/lists/lock
 sudo rm /var/lib/dpkg/lock
 sudo apt-get autoclean
