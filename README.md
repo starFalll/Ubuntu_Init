@@ -43,7 +43,6 @@ ubuntu 64位系统一键环境配置脚本
 cd Ubuntu_Init
 
 sudo apt-get -y install -f 
-
 ```
 
 然后再次运行脚本：
@@ -53,7 +52,7 @@ sudo apt-get -y install -f
 
 ## 目前支持：
 
-- [x] 换USTC源
+- [x] 换USTC源(16.04)/163源(14.04)
 - [x] 更新系统软件
 - [x] 更换目录为英文(若是中文目录的话)
 - [x] 同步windows/Ubuntu双系统时间
