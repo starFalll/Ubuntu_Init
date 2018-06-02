@@ -35,6 +35,44 @@ ubuntu 64位系统一键环境配置脚本
 
 `./Linux_Init.sh 2>  error.log` 
 
+去喝杯咖啡吧！
+
+ps: 脚本运行完最后会询问您是否重启。
+
+## 配置项说明
+
+**config **文件为配置项，可以根据自己的需要修改配置项，参数说明如下：
+
+y---------安装
+
+n---------不安装
+
+1---------安装
+
+0---------不安装
+
+`editor `选项比较特殊，请参见下面说明。
+
+```
+ChangeSources=y #换源，16.04换中科大源，14.04换163源，默认需要换源
+Update=y   #更新软件
+DualBoot=n #如果是windows/Ubuntu 双系统则是"y"，否则为"n"，默认为单系统
+YN=1 #搜狗拼音输入法
+browser=0 #该选项为安装chrome(会卸载自带的firefox)
+Music=0 #网易云音乐
+Docky=1 #Docky，Docky介绍:https://github.com/starFalll/Ubuntu_Init#what-is-docky
+editer=1 #编辑器，1为Vs code，2为sublime text3，3为不安装编辑器
+Vim=y #Vim
+Openjdk=y #openjdk
+Uget=y #uget下载器
+Typora=y #typora-Markdown编辑器
+Sysmonitor=y #标题栏网速监控软件
+SystemBeautification=y #系统美化
+
+```
+
+
+
 ## 可能出现的问题
 
 如果出现error.log里面出现 **It is impossible to install or remove any software. Please use the package manager "Synaptic" or run "sudo apt-get install -f" in a terminal to fix this issue at first.** 的语句，输入以下命令手动安装:
@@ -70,9 +108,11 @@ sudo apt-get -y install -f
 - [x] 可选安装网易云音乐（仅适用于16.04以上版本）
 - [x] 可选安装docky
 
-**以下为脚本运行中的配置项，请按照脚本提示修改**
+##重启以后的软件配置
 
-## Sogou Pinyin input method configuration
+安装完成重启以后请按照如下说明配置软件。
+
+###Sogou Pinyin input method configuration
 
 搜狗拼音输入法配置(**请重启以后配置!!!**)
 
@@ -84,8 +124,7 @@ Fcitx配置如下图所示，如果没有"键盘-英语(美国)"，点击"+"号�
 
 ![9L9ud.md.png](https://s1.ax2x.com/2017/10/13/9L9ud.md.png)
 
-
-## Title bar network speed monitoring software configuration
+###Title bar network speed monitoring software configuration
 
 标题栏网速监控软件配置
 
@@ -99,7 +138,7 @@ Fcitx配置如下图所示，如果没有"键盘-英语(美国)"，点击"+"号�
 
 在"Customize output"栏添加"net:{net}"项，添加网速监控.
 
-## System landscaping
+###System landscaping
 
 系统美化手动设置项：
 
@@ -117,7 +156,7 @@ Fcitx配置如下图所示，如果没有"键盘-英语(美国)"，点击"+"号�
 
 系统美化设置完成。
 
-## What is docky
+###What is docky
 
 Docky 是一款类似于 MAC OS X 底部启动器的软件程序。同时，它可显示天气预报，并提供了一大堆 docklets，比如显示时钟和CPU使用情况，在某种程度上类似于 AWN 和 cairo-dock。如图:
 
