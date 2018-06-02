@@ -41,7 +41,7 @@ ps: 脚本运行完最后会询问您是否重启。
 
 ## 配置项说明
 
-**config **文件为配置项，可以根据自己的需要修改配置项，参数说明如下：
+**config**文件为配置项，可以根据自己的需要修改配置项，参数说明如下：
 
 y---------安装
 
@@ -108,11 +108,11 @@ sudo apt-get -y install -f
 - [x] 可选安装网易云音乐（仅适用于16.04以上版本）
 - [x] 可选安装docky
 
-##重启以后的软件配置
+## 重启以后的软件配置
 
 安装完成重启以后请按照如下说明配置软件。
 
-###Sogou Pinyin input method configuration
+### Sogou Pinyin input method configuration
 
 搜狗拼音输入法配置(**请重启以后配置!!!**)
 
@@ -138,7 +138,7 @@ Fcitx配置如下图所示，如果没有"键盘-英语(美国)"，点击"+"号�
 
 在"Customize output"栏添加"net:{net}"项，添加网速监控.
 
-###System landscaping
+### System landscaping
 
 系统美化手动设置项：
 
@@ -156,7 +156,7 @@ Fcitx配置如下图所示，如果没有"键盘-英语(美国)"，点击"+"号�
 
 系统美化设置完成。
 
-###What is docky
+### What is docky
 
 Docky 是一款类似于 MAC OS X 底部启动器的软件程序。同时，它可显示天气预报，并提供了一大堆 docklets，比如显示时钟和CPU使用情况，在某种程度上类似于 AWN 和 cairo-dock。如图:
 
