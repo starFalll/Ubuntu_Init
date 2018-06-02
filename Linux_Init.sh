@@ -61,19 +61,19 @@ if [ "${ChangeSources}" == "y" ]; then
 fi
 
 if [ "${Update}" == "y" ]; then
-    sudo rm /var/lib/apt/lists/lock 2>> errorinit.log
-    sudo rm /var/lib/dpkg/lock 2>> errorinit.log
-    sudo apt-get autoclean 2>> errorinit.log
-    sudo apt-get clean 2>> errorinit.log
-    sudo apt-get update 2>> errorinit.log
-    sudo apt-get upgrade -y 2>> errorinit.log
-    sudo apt-get autoremove 2>> errorinit.log
+    sudo rm /var/lib/apt/lists/lock
+    sudo rm /var/lib/dpkg/lock
+    sudo apt-get autoclean
+    sudo apt-get clean
+    sudo apt-get update
+    sudo apt-get upgrade -y
+    sudo apt-get autoremove
 fi
 
 if [ "${DualBoot}" == "y" ]; then
-    sudo apt-get install -y ntpdate   2>> errorinit.log
-    sudo ntpdate time.windows.com     2>> errorinit.log
-    sudo hwclock --localtime --systohc 2>> errorinit.log
+    sudo apt-get install -y ntpdate
+    sudo ntpdate time.windows.com
+    sudo hwclock --localtime --systohc
 fi
 
 # echo -e "***************************************************************************************"
