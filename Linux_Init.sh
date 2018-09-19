@@ -32,9 +32,9 @@ if [ "${ChangeSources}" == "y" ]; then
     		sudo cp /etc/apt/sources.list Backup/sources.list
     		sudo cp sources.list /etc/apt/sources.list
     	else
-    		echo -e "\033[41;37m The sources file which contains USTC sources does not exist! \033[0m" >> errorinit.log
+    		echo -e "\033[41;37m The sources file which contains tsinghua sources does not exist! \033[0m" >> errorinit.log
     		echo -e "\033[41;37m Please check whether the file in the warehouse catalog is complete. \033[0m" >> errorinit.log
-    		echo -e "\033[41;37m (包含中科大的源文件不存在!请检查仓库目录下文件是否完整.) \033[0m" >>errorinit.log
+    		echo -e "\033[41;37m (包含清华的源文件不存在!请检查仓库目录下文件是否完整.) \033[0m" >>errorinit.log
     		#echo -e "Coutinue?(Y/n) :\c"
     		#read  yn
     		#if [ "${yn}" == "n" ] || [ "${yn}" == "N" ]; then
@@ -48,9 +48,9 @@ if [ "${ChangeSources}" == "y" ]; then
             	sudo cp /etc/apt/sources.list Backup/sources.list
             	sudo cp sources14.04.list /etc/apt/sources.list
     	else
-            	echo -e "\033[41;37m The sources file which contains 163 sources does not exist! \033[0m" >>errorinit.log
+            	echo -e "\033[41;37m The sources file which contains tsinghua sources does not exist! \033[0m" >>errorinit.log
             	echo -e "\033[41;37m Please check whether the file in the warehouse catalog is complete. \033[0m" >> errorinit.log
-            	echo -e "\033[41;37m (包含163的源文件不存在!请检查仓库目录下文件是否完整.) \033[0m" >>errorinit.log
+            	echo -e "\033[41;37m (包含清华的源文件不存在!请检查仓库目录下文件是否完整.) \033[0m" >>errorinit.log
             	#echo -e "Coutinue?(Y/n) :\c"
             	#read  yn
             	#if [ "${yn}" == "n" ] || [ "${yn}" == "N" ]; then

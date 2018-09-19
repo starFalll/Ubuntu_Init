@@ -54,7 +54,7 @@ n---------不安装
 `editor `选项比较特殊，请参见下面说明。
 
 ```
-ChangeSources=y #换源，16.04换中科大源，14.04换163源，默认需要换源
+ChangeSources=y #换源，换清华源，默认需要换源
 Update=y   #更新软件
 DualBoot=n #如果是windows/Ubuntu 双系统则是"y"，否则为"n"，默认为单系统
 YN=1 #搜狗拼音输入法
@@ -90,7 +90,7 @@ sudo apt-get -y install -f
 
 ## 目前支持：
 
-- [x] 换USTC源(16.04)/163源(14.04)
+- [x] 换清华镜像源(16.04/14.04)
 - [x] 更新系统软件
 - [x] 更换目录为英文(若是中文目录的话)
 - [x] 同步windows/Ubuntu双系统时间
