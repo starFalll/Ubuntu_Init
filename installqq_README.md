@@ -28,7 +28,7 @@ chmod u+x installqq.sh
 
 `cp SIMSUN.TTC ~/.cxoffice/apps.com.qq.im/dosdevices/c\:/windows/Fonts/SIMSUN.TTC`
 
-然后再次打开qq，乱码解决:
+然后再次打开qq，乱码解决
 
 ### 关于QQ关闭以后再次登录显示被占用的解决方案
 
