@@ -4,11 +4,11 @@
 
 下载完成以后，进入到linuxQQ文件目录下，如所示：
 
-![B3T6O.png](https://s1.ax2x.com/2017/10/24/B3T6O.png)
+![github35.png](https://i.loli.net/2019/10/26/GqCIKTMDX34d8OS.png)
 
 将**installqq.sh**脚本复制linuxQQ目录下，如所示：
 
-![B3m3q.png](https://s1.ax2x.com/2017/10/24/B3m3q.png)
+![github36.png](https://i.loli.net/2019/10/26/1wsYO3eHNcKgq2I.png)
 
 运行脚本:
 
@@ -18,25 +18,17 @@ chmod u+x installqq.sh
 ./installqq.sh
 ```
 
-
-
 最后点击右上角图标搜索qq，找到以后点击启动.
 
-![B3H4A.png](https://s1.ax2x.com/2017/10/24/B3H4A.png)
+![github34.png](https://i.loli.net/2019/10/26/DCpvcAtib1IMeEl.png)
 
 可以看到现在qq是乱码状态:
-
-![BkMDG.png](https://s1.ax2x.com/2017/11/04/BkMDG.png)
 
 再在终端输入:
 
 `cp SIMSUN.TTC ~/.cxoffice/apps.com.qq.im/dosdevices/c\:/windows/Fonts/SIMSUN.TTC`
 
-[![BkObn.md.png](https://s1.ax2x.com/2017/11/04/BkObn.md.png)](https://simimg.com/i/BkObn)
-
 然后再次打开qq，乱码解决:
-
-![BkbKE.png](https://s1.ax2x.com/2017/11/04/BkbKE.png)
 
 ### 关于QQ关闭以后再次登录显示被占用的解决方案
 

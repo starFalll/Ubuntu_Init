@@ -11,7 +11,7 @@ ubuntu 64位系统一键环境配置脚本
 
 配置完毕的界面如所示:
 
-![9KeSE.png](https://s1.ax2x.com/2017/10/14/9KeSE.png)
+![github28.png](https://i.loli.net/2019/10/26/GE8RBVYvLKQy9Js.png)
 
 ## 如何使用
 
@@ -118,11 +118,11 @@ sudo apt-get -y install -f
 
 点击右上角输入法，搜狗拼音->设置->高级->打开Fcitx设置，如下图所示：
 
-![9L5Fe.md.png](https://s1.ax2x.com/2017/10/13/9L5Fe.md.png)
+![github23.png](https://i.loli.net/2019/10/26/gSlLVWercpYI6tG.png)
 
 Fcitx配置如下图所示，如果没有"键盘-英语(美国)"，点击"+"号添加即可.
 
-![9L9ud.md.png](https://s1.ax2x.com/2017/10/13/9L9ud.md.png)
+![github24.png](https://i.loli.net/2019/10/26/uzMmK5QpgIL9oHC.png)
 
 ###Title bar network speed monitoring software configuration
 
@@ -130,11 +130,11 @@ Fcitx配置如下图所示，如果没有"键盘-英语(美国)"，点击"+"号�
 
 点击右上角监控栏的Preferences按钮，在打开的设置面板里面按照如下设置：
 
-![9EqyO.md.png](https://s1.ax2x.com/2017/10/13/9EqyO.md.png)
+![github21.png](https://i.loli.net/2019/10/26/t3BZFChe7p8yV6l.png)
 
 勾选"Run on startup",开机启动.
 
-![9Ewlq.md.png](https://s1.ax2x.com/2017/10/13/9Ewlq.md.png)
+![github22.png](https://i.loli.net/2019/10/26/uhiPUS28Xm1V4Az.png)
 
 在"Customize output"栏添加"net:{net}"项，添加网速监控.
 
@@ -144,15 +144,15 @@ Fcitx配置如下图所示，如果没有"键盘-英语(美国)"，点击"+"号�
 
 在搜索栏搜索"unity tweak tool",打开Unity 图形化管理工具，如下图所示：
 
-![D0193.png](https://s1.ax2x.com/2017/10/15/D0193.png)
+![github29.png](https://i.loli.net/2019/10/26/dpCl1h7QZxk4Y9u.png)
 
 点击“主题”，选择“Flatabulous”扁平化主题：
 
-![D0eJ6.png](https://s1.ax2x.com/2017/10/15/D0eJ6.png)
+![github31.png](https://i.loli.net/2019/10/26/Sscg2yHw6jqDR1u.png)
 
 点击“图标”，选择“Ultra-flat”图标:
 
-![D0UIp.png](https://s1.ax2x.com/2017/10/15/D0UIp.png)
+![github32.png](https://i.loli.net/2019/10/26/4N2LH1XImZfeFc8.png)
 
 系统美化设置完成。
 
@@ -160,13 +160,11 @@ Fcitx配置如下图所示，如果没有"键盘-英语(美国)"，点击"+"号�
 
 Docky 是一款类似于 MAC OS X 底部启动器的软件程序。同时，它可显示天气预报，并提供了一大堆 docklets，比如显示时钟和CPU使用情况，在某种程度上类似于 AWN 和 cairo-dock。如图:
 
-![z49YX.png](https://s1.ax2x.com/2017/12/21/z49YX.png)
+![githubnew01.png](https://i.loli.net/2019/10/26/BAUnaSmvObW4yV9.png)
 
 如何使用:
 
-脚本运行完成以后，在左上角搜索栏里搜索docky，点击即可启动，以后开机也会自动启动，无须再次手动启动。如图：
-
-![zPs3q.png](https://s1.ax2x.com/2017/12/22/zPs3q.png)
+脚本运行完成以后，在左上角搜索栏里搜索docky，点击即可启动，以后开机也会自动启动，无须再次手动启动。
 
 **Enjoy it!**
 
